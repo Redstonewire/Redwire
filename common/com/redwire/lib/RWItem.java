@@ -1,4 +1,4 @@
-package com.redwire.items;
+package com.redwire.lib;
 
 import net.minecraft.item.Item;
 

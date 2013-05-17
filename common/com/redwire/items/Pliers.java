@@ -1,6 +1,7 @@
 package com.redwire.items;
 
 import com.redwire.Redwire;
+import com.redwire.lib.RWItem;
 
 public class Pliers extends RWItem {
   

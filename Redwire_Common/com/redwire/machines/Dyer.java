@@ -9,7 +9,7 @@ public class Dyer extends Block {
   public Dyer() {
     super(Redwire.dyerID, Material.cloth);
     setCreativeTab(Redwire.Redtab);
-    setUnlocalizedName("Insulated Wire Dyer");
+    setUnlocalizedName("Wire Dyeing Machine");
     setHardness(0.5F);
     setStepSound(Block.soundClothFootstep);
   }

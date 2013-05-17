@@ -15,7 +15,7 @@ public class insulator extends Block {
         setUnlocalizedName("Wire Insulator");    
         setHardness(0.5F);    
         setStepSound(Block.soundGrassFootstep);    
-        GameRegistry.registerBlock(Redwire.Insulator, this.getUnlocalizedName());  
-        LanguageRegistry.addName(Redwire.Insulator, this.getUnlocalizedName2());  
+        GameRegistry.registerBlock(Redwire.Insulator, getUnlocalizedName());  
+        LanguageRegistry.addName(Redwire.Insulator, getUnlocalizedName2());  
        }    
    }

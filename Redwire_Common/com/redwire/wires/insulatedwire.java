@@ -16,7 +16,7 @@ public class insulatedwire extends Block {
         setUnlocalizedName("Redstone Wire");    
         setHardness(0.5F);    
         setStepSound(Block.soundClothFootstep);    
-        GameRegistry.registerBlock(Redwire.Redwire, "Redwire");  
-        LanguageRegistry.addName(Redwire.Redwire, "Redstone Wire");  
+        GameRegistry.registerBlock(Redwire.Redwire, getUnlocalizedName());  
+        LanguageRegistry.addName(Redwire.Redwire, getUnlocalizedName2());  
        }    
    }

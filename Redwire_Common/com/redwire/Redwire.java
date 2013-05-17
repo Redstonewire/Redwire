@@ -107,12 +107,12 @@ public class Redwire
         GameRegistry.registerItem(Dopedingot, "Dopedingot");
         LanguageRegistry.addName(Dopedingot, "Redstone doped ingot");
         
-        Pliers = new pliers(pliersID).setFull3D().setMaxStackSize(1).setUnlocalizedName("Pliers").setCreativeTab(Redtab);
+        Pliers = new pliers(pliersID);
         
         GameRegistry.registerItem(Pliers, "Pliers");
         LanguageRegistry.addName(Pliers, "Clipping pliers");
         
-        Spools = new spools(spoolID).setFull3D().setMaxStackSize(1).setMaxDamage(256).setUnlocalizedName("Spool").setCreativeTab(Redtab);
+        Spools = new spools(spoolID);
         
         GameRegistry.registerItem(Spools, "Spool");
         LanguageRegistry.addName(Spools, "Wire Spool");

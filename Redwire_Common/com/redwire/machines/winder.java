@@ -16,7 +16,7 @@ public class winder extends Block {
         setUnlocalizedName("Redstone Wire");    
         setHardness(0.5F);    
         setStepSound(Block.soundGrassFootstep);    
-        GameRegistry.registerBlock(Redwire.Winder, this.getUnlocalizedName());
-        LanguageRegistry.addName(Redwire.Winder, this.getUnlocalizedName2()); 
+        GameRegistry.registerBlock(Redwire.Winder, getUnlocalizedName());
+        LanguageRegistry.addName(Redwire.Winder, getUnlocalizedName2()); 
        }    
    }

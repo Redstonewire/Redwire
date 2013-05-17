@@ -15,7 +15,7 @@ public class extruder extends Block {
         setUnlocalizedName("Wire Extruder");    
         setHardness(0.5F);    
         setStepSound(Block.soundGrassFootstep);    
-        GameRegistry.registerBlock(Redwire.Extruder, this.getUnlocalizedName());  
-        LanguageRegistry.addName(Redwire.Extruder, this.getUnlocalizedName2());  
+        GameRegistry.registerBlock(Redwire.Extruder, getUnlocalizedName());  
+        LanguageRegistry.addName(Redwire.Extruder, getUnlocalizedName2());  
        }    
    }

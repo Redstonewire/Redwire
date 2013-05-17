@@ -16,7 +16,7 @@ public class dyer extends Block {
         setUnlocalizedName("Redstone Wire");    
         setHardness(0.5F);    
         setStepSound(Block.soundClothFootstep);    
-        GameRegistry.registerBlock(Redwire.Dyer, this.getUnlocalizedName());  
-        LanguageRegistry.addName(Redwire.Redwire, this.getUnlocalizedName2());  
+        GameRegistry.registerBlock(Redwire.Dyer, getUnlocalizedName());  
+        LanguageRegistry.addName(Redwire.Redwire, getUnlocalizedName2());  
        }    
    }

@@ -1,16 +1,22 @@
 package com.redwire.machines;
 
+import com.redwire.Redwire;
+
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.*;
 
 public class winder extends Block {  
     
-    public winder(int id, CreativeTabs tabName) {  
-     super(id, Material.grass);  
-     setCreativeTab(tabName);  
-     setUnlocalizedName("Spool Winder");  
-     setHardness(0.5F);  
-     setStepSound(Block.soundClothFootstep);  
-    }  
-}
+    public winder() {    
+        super(Redwire.winderID, Material.grass);    
+        setCreativeTab(Redwire.Redtab);  
+        setUnlocalizedName("Redstone Wire");    
+        setHardness(0.5F);    
+        setStepSound(Block.soundGrassFootstep);    
+        GameRegistry.registerBlock(Redwire.Winder, this.getUnlocalizedName());
+        LanguageRegistry.addName(Redwire.Winder, this.getUnlocalizedName2()); 
+       }    
+   }

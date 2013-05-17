@@ -1,16 +1,21 @@
 package com.redwire.machines;
 
+import com.redwire.Redwire;
+
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 
 public class insulator extends Block {  
     
-    public insulator(int id, CreativeTabs tabName) {  
-     super(id, Material.grass);  
-     setCreativeTab(tabName);  
-     setUnlocalizedName("Wire Insulator");  
-     setHardness(0.5F);  
-     setStepSound(Block.soundGrassFootstep);  
-    }  
-}
+    public insulator() {    
+        super(Redwire.insulatorID, Material.grass);    
+        setCreativeTab(Redwire.Redtab);  
+        setUnlocalizedName("Wire Insulator");    
+        setHardness(0.5F);    
+        setStepSound(Block.soundGrassFootstep);    
+        GameRegistry.registerBlock(Redwire.Insulator, this.getUnlocalizedName());  
+        LanguageRegistry.addName(Redwire.Insulator, this.getUnlocalizedName2());  
+       }    
+   }

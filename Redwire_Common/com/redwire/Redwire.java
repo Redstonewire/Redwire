@@ -88,35 +88,17 @@ public class Redwire
         
         //Blocks
         
-        Extruder = new extruder(extruderID, Redtab);
+        Extruder = new extruder();
         
-        GameRegistry.registerBlock(Extruder, "Extruder");
-        LanguageRegistry.addName(Extruder, "Wire Extruder");
+        Dyer = new dyer();
         
-        Dyer = new dyer(dyerID, Redtab);
+        Winder = new winder();
+      
+        Insulator = new insulator();
         
-        GameRegistry.registerBlock(Dyer, "Dyer");
-        LanguageRegistry.addName(Dyer, "Insulation Dyer");
+        Insulatedwire = new insulatedwire();
         
-        Winder = new winder(winderID, Redtab);
-        
-        GameRegistry.registerBlock(Winder, "Winder");
-        LanguageRegistry.addName(Winder, "Spool Winder");
-        
-        Insulator = new insulator(insulatorID, Redtab);
-        
-        GameRegistry.registerBlock(Insulator, "Insualtor");
-        LanguageRegistry.addName(Insulator, "Wire Insulator");
-        
-        Insulatedwire = new insulatedwire(insulatedwireID, Redtab);
-        
-        GameRegistry.registerBlock(Insulatedwire, "Insulatedwire");
-        LanguageRegistry.addName(Insulatedwire, "Insulated Redstone wire");
-        
-        Redwire = new redwire(redwireID, Redtab);
-        
-        GameRegistry.registerBlock(Redwire, "Redwire");
-        LanguageRegistry.addName(Redwire, "Redstone Wire");
+        Redwire = new redwire();
         
         //Items
         

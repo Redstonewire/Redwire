@@ -9,7 +9,7 @@ public class Winder extends Block {
   public Winder() {
     super(Redwire.winderID, Material.grass);
     setCreativeTab(Redwire.Redtab);
-    setUnlocalizedName("Wire Winder");
+    setUnlocalizedName("Redwire:WireWinder");
     setHardness(0.5F);
     setStepSound(Block.soundGrassFootstep);
   }

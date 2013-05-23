@@ -98,7 +98,7 @@ public class Redwire
 
     winder = new Winder();
     GameRegistry.registerBlock(winder, winder.getUnlocalizedName());  
-    LanguageRegistry.addName(winder, winder.getUnlocalizedName2());  
+    LanguageRegistry.addName(winder, "Wire Winder");  
 
     insulator = new Insulator();
     GameRegistry.registerBlock(insulator, insulator.getUnlocalizedName());  

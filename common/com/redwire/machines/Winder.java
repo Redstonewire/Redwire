@@ -1,7 +1,5 @@
 package com.redwire.machines;
 
-import java.util.Random;
-
 import com.redwire.Redwire;
 
 import cpw.mods.fml.relauncher.Side;

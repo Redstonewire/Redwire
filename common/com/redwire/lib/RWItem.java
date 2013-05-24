@@ -2,11 +2,13 @@ package com.redwire.lib;
 
 import net.minecraft.item.Item;
 
-public class RWItem extends Item {
+public class RWItem extends Item
+{
 
   private String Name;
 
-  public RWItem(int ID) {
+  public RWItem(int ID)
+  {
     super(ID);
   }
 

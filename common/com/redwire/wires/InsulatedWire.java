@@ -9,7 +9,7 @@ public class InsulatedWire extends Block {
   public InsulatedWire() {
     super(Redwire.insulatedWireID, Material.cloth);
     setCreativeTab(Redwire.Redtab);
-    setUnlocalizedName("Insulated Red-Metal Wire");
+    setUnlocalizedName("Redwire:InsulatedRedMetalWire");
     setHardness(0.5F);
     setStepSound(Block.soundClothFootstep);
   }

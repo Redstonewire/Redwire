@@ -9,7 +9,7 @@ public class DopedIngot extends RWItem {
     super(id);
     setFull3D();
     setMaxStackSize(16);
-    setUnlocalizedName("Doped Ingot");
+    setUnlocalizedName("Redwire:DopedIngot");
     setCreativeTab(Redwire.Redtab);
   }
 

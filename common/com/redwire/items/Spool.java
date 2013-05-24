@@ -10,7 +10,7 @@ public class Spool extends RWItem {
     setFull3D();
     setMaxStackSize(1);
     setMaxDamage(256);
-    setUnlocalizedName("Wire Spool");
+    setUnlocalizedName("Redwire:Spool");
     setCreativeTab(Redwire.Redtab);
   }
 

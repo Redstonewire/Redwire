@@ -9,7 +9,7 @@ public class Wire extends Block {
   public Wire() {
     super(Redwire.redwireID, Material.cloth);
     setCreativeTab(Redwire.Redtab);
-    setUnlocalizedName("Red-Metal Wire");
+    setUnlocalizedName("Redwire:RedMetalWire");
     setHardness(0.5F);
     setStepSound(Block.soundClothFootstep);
   }

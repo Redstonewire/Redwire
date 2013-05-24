@@ -9,7 +9,7 @@ public class Pliers extends RWItem {
     super(id);
     setFull3D();
     setMaxStackSize(1);
-    setUnlocalizedName("Pliers");
+    setUnlocalizedName("Redwire:Pliers");
     setCreativeTab(Redwire.Redtab);
   }
 

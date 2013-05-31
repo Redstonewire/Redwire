@@ -7,8 +7,12 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.entity.EntityLiving;
+import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraft.util.Icon;
+import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
 public class Winder extends BlockContainer
@@ -85,6 +89,35 @@ public class Winder extends BlockContainer
       this.WireWindersides = par1IconRegister.registerIcon("Redwire:WireWindersides");
       this.WireWinderinputside = par1IconRegister.registerIcon("Redwire:WireWinderinputside");
   }
+ public void onBlockPlacedBy(World par1World, int par2, int par3, int par4, EntityLiving par5EntityLiving, ItemStack par6ItemStack)
+ {
+     int l = MathHelper.floor_double((double)(par5EntityLiving.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
+
+     if (l == 0)
+     {
+         par1World.setBlockMetadataWithNotify(par2, par3, par4, 2, 2);
+     }
+
+     if (l == 1)
+     {
+         par1World.setBlockMetadataWithNotify(par2, par3, par4, 5, 2);
+     }
+
+     if (l == 2)
+     {
+         par1World.setBlockMetadataWithNotify(par2, par3, par4, 3, 2);
+     }
+
+     if (l == 3)
+     {
+         par1World.setBlockMetadataWithNotify(par2, par3, par4, 4, 2);
+     }
+
+     if (par6ItemStack.hasDisplayName())
+     {
+         ((TileEntityFurnace)par1World.getBlockTileEntity(par2, par3, par4)).func_94129_a(par6ItemStack.getDisplayName());
+     }
+ }
 
 @Override
 public TileEntity createNewTileEntity(World world) {

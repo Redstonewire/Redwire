@@ -90,11 +90,11 @@ public class Redwire
 
     extruder = new Extruder();
     GameRegistry.registerBlock(extruder, extruder.getUnlocalizedName());  
-    LanguageRegistry.addName(extruder, extruder.getUnlocalizedName2());  
+    LanguageRegistry.addName(extruder, "Wire Extruder");  
 
     dyer = new Dyer();
     GameRegistry.registerBlock(dyer, dyer.getUnlocalizedName());  
-    LanguageRegistry.addName(dyer, dyer.getUnlocalizedName2());  
+    LanguageRegistry.addName(dyer, "Insulation Dyeing Machine");  
 
     winder = new Winder();
     GameRegistry.registerBlock(winder, winder.getUnlocalizedName());  
@@ -102,29 +102,29 @@ public class Redwire
 
     insulator = new Insulator();
     GameRegistry.registerBlock(insulator, insulator.getUnlocalizedName());  
-    LanguageRegistry.addName(insulator, insulator.getUnlocalizedName2());  
+    LanguageRegistry.addName(insulator, "Wire Insulator");  
 
     insulatedWire = new InsulatedWire();
     GameRegistry.registerBlock(insulatedWire, insulatedWire.getUnlocalizedName());  
-    LanguageRegistry.addName(insulatedWire, insulatedWire.getUnlocalizedName2());  
+    LanguageRegistry.addName(insulatedWire, "Insulated Red metal wire");  
 
     wire = new Wire();
     GameRegistry.registerBlock(wire, wire.getUnlocalizedName());  
-    LanguageRegistry.addName(wire, wire.getUnlocalizedName2());  
+    LanguageRegistry.addName(wire, "Red metal Wire");  
 
     //Items
 
     dopedIngot = new DopedIngot(dopedingotID);
     GameRegistry.registerItem(dopedIngot, dopedIngot.getUnlocalizedName());  
-    LanguageRegistry.addName(dopedIngot, dopedIngot.getUnlocalizedName2());  
+    LanguageRegistry.addName(dopedIngot, "Redstone doped Ingot");  
 
     pliers = new Pliers(pliersID);
     GameRegistry.registerItem(pliers, pliers.getUnlocalizedName());  
-    LanguageRegistry.addName(pliers, pliers.getUnlocalizedName2());  
+    LanguageRegistry.addName(pliers, "Linesman pliers");  
 
     spool = new Spool(spoolID);
     GameRegistry.registerItem(spool, spool.getUnlocalizedName());  
-    LanguageRegistry.addName(spool, spool.getUnlocalizedName2());  
+    LanguageRegistry.addName(spool, "Wire Spool");  
 
   }
 

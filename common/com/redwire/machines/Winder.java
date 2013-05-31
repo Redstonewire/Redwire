@@ -1,7 +1,6 @@
 package com.redwire.machines;
 
 import com.redwire.Redwire;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -12,29 +11,30 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Icon;
 import net.minecraft.world.World;
 
-public class Winder extends BlockContainer {
+public class Winder extends BlockContainer
+{
 
   public Winder()
-  {
+    {
     super(Redwire.winderID, Material.grass);
     setCreativeTab(Redwire.Redtab);
-    setUnlocalizedName("Redwire:WireWinder");
-    setHardness(0.5F);
+    setUnlocalizedName("WireWinder");
+    setHardness(1.5F);
     setStepSound(Block.soundGrassFootstep);
-  }
+    }
 
   @SideOnly(Side.CLIENT)
   private Icon WireWinderinputside;
   @SideOnly(Side.CLIENT)
   private Icon WireWinderFront;
+  @SideOnly(Side.CLIENT)
+  private Icon WireWindersides;
 
-   public void onBlockAdded(World par1World, int par2, int par3, int par4)
-  {
-      super.onBlockAdded(par1World, par2, par3, par4);
-      this.setDefaultDirection(par1World, par2, par3, par4);
-  }
+  
+  @SideOnly(Side.CLIENT)
 
-  private void setDefaultDirection(World par1World, int par2, int par3, int par4)
+  
+  private void setWinderDefaultDirection(World par1World, int par2, int par3, int par4)
   {
       if (!par1World.isRemote)
       {
@@ -70,20 +70,22 @@ public class Winder extends BlockContainer {
 
   @SideOnly(Side.CLIENT)
 
+  /**
+   * From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
+   */
   public Icon getIcon(int par1, int par2)
   {
-      return par1 == 1 ? this.WireWinderinputside : (par1 == 0 ? this.WireWinderinputside : (par1 != par2 ? this.blockIcon : this.WireWinderFront));
+      int k = par2 & 7;
+      return par1 == k ? (k != 1 && k != 0 ? this.WireWinderFront : this.WireWindersides) : (k != 1 && k != 0 ? (par1 != 1 && par1 != 0 ? this.WireWindersides : this.WireWindersides) : this.WireWinderFront);
   }
 
-  @SideOnly(Side.CLIENT)
-
-  public void registerIcons(IconRegister par1IconRegister)
+ public void registerIcons(IconRegister par1IconRegister)
   {
-      this.blockIcon = par1IconRegister.registerIcon("Redwire:WireWindersides");
       this.WireWinderFront = par1IconRegister.registerIcon("Redwire:WireWinderFront");
+      this.WireWindersides = par1IconRegister.registerIcon("Redwire:WireWindersides");
       this.WireWinderinputside = par1IconRegister.registerIcon("Redwire:WireWinderinputside");
   }
-  
+
 @Override
 public TileEntity createNewTileEntity(World world) {
     // TODO Auto-generated method stub
